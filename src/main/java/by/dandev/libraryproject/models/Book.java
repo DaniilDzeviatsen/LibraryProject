@@ -9,20 +9,20 @@ public class Book {
     private int id;
     @NotEmpty(message = "Name of the book should not be empty")
     @Size(min = 1, max = 100, message = "Name of the book should be between 1 and 100 symbols")
-    private String book_name;
+    private String bookName;
 
     @NotEmpty(message = "Author of the book should not be empty")
     @Size(min = 1, max = 100, message = "Author of the book should be between 1 and 100 symbols")
     private String author;
 
     @NotEmpty(message = "Year of publishing should not be empty")
-    private int year_of_publishing;
+    private int year;
 
-    public Book(int id, String book_name, String author, int year_of_publishing) {
-        this.id = id;
-        this.book_name = book_name;
+    public Book(String bookName, String author, int year) {
+
+        this.bookName = bookName;
         this.author = author;
-        this.year_of_publishing = year_of_publishing;
+        this.year = year;
     }
 
     public Book() {
@@ -36,12 +36,12 @@ public class Book {
         this.id = id;
     }
 
-    public String getBook_name() {
-        return book_name;
+    public String getBookName() {
+        return bookName;
     }
 
-    public void setBook_name(String book_name) {
-        this.book_name = book_name;
+    public void setBookName(String bookName) {
+        this.bookName = bookName;
     }
 
     public String getAuthor() {
@@ -52,11 +52,11 @@ public class Book {
         this.author = author;
     }
 
-    public int getYear_of_publishing() {
-        return year_of_publishing;
+    public int getYear() {
+        return year;
     }
 
-    public void setYear_of_publishing(int year_of_publishing) {
-        this.year_of_publishing = year_of_publishing;
+    public void setYear(int year) {
+        this.year = year;
     }
 }
