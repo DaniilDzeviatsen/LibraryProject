@@ -7,19 +7,19 @@
 <body>
 
 <form th:method="PATCH" th:action="@{/books/{id}(id=${book.getId()})}" th:object="${book}">
-    <label for="bookName">Введите название книги: </label>
+    <label for="bookName">Input the name of the book: </label>
     <input type="text" th:field="*{bookName}" id="bookName"/>
     <div style="" th:if="${#fields.hasErrors('bookName')}" th:errors="*{bookName}">Title error</div>
     <br/>
-    <label for="author">Введите автора:</label>
+    <label for="author">Input the author:</label>
     <input type="text" th:field="*{author}" id="author"/>
     <div style="" th:if="${#fields.hasErrors('author')}" th:errors="*{author}">Author Error</div>
     <br/>
-    <label for="year">Введите год:</label>
+    <label for="year">Input the year:</label>
     <input type="text" th:field="*{year}" id="year"/>
     <div style="" th:if="${#fields.hasErrors('year')} " th:errors="*{year}">Year Error</div>
     <br/>
-    <input type="submit" value="Редактировать"/>
+    <input type="submit" value="Edit/>
 </form>
 
 </body>

@@ -10,7 +10,7 @@
 <p th:if="${person.getFullName() + ', ' + person.getYearOfBirth()}">VALUE</p>
 
 <div th:if="${books.isEmpty()}">
-    <p>Человек пока не взял ни одной книги</p>
+    <p>This person has no books</p>
     <hr/>
 </div>
 
@@ -25,11 +25,11 @@
 </div>
 
 <form th:method="GET" th:action="@{/people/{id}/edit(id=${person.getId()})}">
-    <input type="submit" value="Редактировать"/>
+    <input type="submit" value="Edit"/>
 </form>
 
 <form th:method="DELETE" th:action="@{/people/{id}(id=${person.getId()})}">
-    <input type="submit" value="Удалить"/>
+    <input type="submit" value="Delete"/>
 </form>
 
 </body>

@@ -15,7 +15,8 @@ public class Book {
     @Size(min = 1, max = 100, message = "Author of the book should be between 1 and 100 symbols")
     private String author;
 
-    @NotEmpty(message = "Year of publishing should not be empty")
+  //  @NotEmpty(message = "Year of publishing should not be empty")
+    @Min(value = 1500, message = "Year should be greater than 1500")
     private int year;
 
     public Book(String bookName, String author, int year) {
